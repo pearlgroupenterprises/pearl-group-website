@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-import heroCentralFlorida from "@/assets/hero-central-florida.jpg.asset.json";
+import heroLiveOakCentralFlorida from "@/assets/hero-live-oak-central-florida.jpg";
 import coLeverai from "@/assets/co-leverai-florida-2.jpg.asset.json";
 import coBreathesafe from "@/assets/co-breathesafe-florida.jpg.asset.json";
 import coSolstone from "@/assets/co-solstone-florida.jpg.asset.json";
@@ -148,19 +148,15 @@ function Index() {
       {/* Hero with integrated navigation */}
       <header id="top" className="relative isolate min-h-[92vh] overflow-hidden bg-pearl-dark">
         <img
-          src={heroCentralFlorida.url}
-          alt="Contemporary Central Florida architecture beneath mature live oaks in warm natural light"
+          src={heroLiveOakCentralFlorida}
+          alt="Contemporary Central Florida architecture beneath a mature live oak in warm natural light"
           width={1920}
           height={1200}
-          className="absolute inset-0 -z-20 h-full w-full object-cover"
+          fetchPriority="high"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[58%_center] md:object-center"
         />
-        <div
-          className="absolute inset-0 -z-10"
-          style={{
-            background:
-              "linear-gradient(100deg, rgba(7,26,32,0.96) 0%, rgba(7,26,32,0.86) 38%, rgba(10,31,38,0.45) 72%, rgba(10,31,38,0.25) 100%)",
-          }}
-        />
+        <div className="absolute inset-0 -z-10 bg-pearl-dark/40" />
+        <div className="absolute inset-0 -z-10 bg-linear-to-r from-pearl-ink via-pearl-dark/80 to-pearl-dark/10" />
 
         <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
           <a href="#top" className="flex items-center gap-3 text-pearl-surface">
@@ -200,16 +196,14 @@ function Index() {
           </a>
         </nav>
 
-        <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 pb-16 pt-16 md:px-10 md:pb-24 md:pt-28">
-          <div className="mb-6 flex items-center gap-4">
-            <span className="h-px w-10 bg-pearl-accent/70" />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-pearl-accent">
-              Winter Garden, FL
-            </span>
-          </div>
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 pb-16 pt-20 md:px-10 md:pb-24 md:pt-32">
           <h1 className="max-w-4xl font-serif text-4xl leading-[1.05] text-pearl-surface sm:text-5xl md:text-6xl xl:text-7xl">
-            Building businesses that improve how people{" "}
-            <em className="italic text-pearl-accent">live, work and operate.</em>
+            <span className="block">Building businesses</span>
+            <span className="block">that improve how</span>
+            <span className="block">
+              people <em className="italic text-pearl-accent">live, work and</em>
+            </span>
+            <em className="block italic text-pearl-accent">operate.</em>
           </h1>
           <p className="mt-8 max-w-xl text-base leading-relaxed text-pearl-surface/70 md:text-lg">
             Pearl Group Enterprises is a Central Florida family-owned company that brings together
@@ -236,10 +230,6 @@ function Index() {
               </span>
             </a>
           </div>
-          <p className="mt-14 text-[10px] uppercase tracking-[0.28em] text-pearl-surface/45">
-            Family-owned · Central Florida
-          </p>
-
         </div>
       </header>
 
@@ -266,9 +256,6 @@ function Index() {
                   Based in Central Florida, we combine practical expertise, thoughtful use of
                   technology and disciplined operations with a long-term approach to building
                   businesses and relationships.
-                </p>
-                <p className="mt-10 border-t border-pearl-dark/10 pt-6 text-sm font-semibold tracking-wide text-pearl-teal">
-                  Practical expertise · Thoughtful technology · Disciplined operations
                 </p>
               </div>
             </div>
