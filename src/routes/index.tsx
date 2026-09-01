@@ -237,8 +237,9 @@ function Index() {
             </a>
           </div>
           <p className="mt-14 text-[10px] uppercase tracking-[0.28em] text-pearl-surface/45">
-            Winter Garden, Florida
+            Family-owned · Central Florida
           </p>
+
         </div>
       </header>
 
