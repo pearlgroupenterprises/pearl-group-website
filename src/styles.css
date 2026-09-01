@@ -37,9 +37,13 @@
   --radius-4xl: calc(var(--radius) + 16px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-pearl-dark: #12151a;
-  --color-pearl-accent: #d4af37;
-  --color-pearl-surface: #f9f7f2;
+  --color-pearl-dark: #0a1f26;
+  --color-pearl-ink: #071a20;
+  --color-pearl-teal: #22706e;
+  --color-pearl-accent: #d9b877;
+  --color-pearl-gold: #c99a3f;
+  --color-pearl-surface: #fdfaf2;
+
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
   --color-card: var(--card);
