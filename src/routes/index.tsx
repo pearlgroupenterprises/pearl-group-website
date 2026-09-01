@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 import heroCentralFlorida from "@/assets/hero-central-florida.jpg.asset.json";
-import coLeverai from "@/assets/co-leverai-florida.jpg.asset.json";
+import coLeverai from "@/assets/co-leverai-florida-2.jpg.asset.json";
 import coBreathesafe from "@/assets/co-breathesafe-florida.jpg.asset.json";
 import coSolstone from "@/assets/co-solstone-florida.jpg.asset.json";
 
