@@ -197,7 +197,7 @@ function Index() {
         </nav>
 
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 pb-16 pt-20 md:px-10 md:pb-24 md:pt-32">
-          <h1 className="max-w-3xl font-serif text-4xl leading-[1.05] text-pearl-surface sm:text-5xl md:text-6xl xl:text-7xl">
+          <h1 className="max-w-4xl font-serif text-4xl leading-[1.05] text-pearl-surface sm:text-5xl md:text-6xl xl:text-7xl">
             <span className="block">Building businesses</span>
             <span className="block">that improve how</span>
             <span className="block">
