@@ -200,8 +200,10 @@ function Index() {
           <h1 className="max-w-3xl font-serif text-4xl leading-[1.05] text-pearl-surface sm:text-5xl md:text-6xl xl:text-7xl">
             <span className="block">Building businesses</span>
             <span className="block">that improve how</span>
-            <span className="block">people </span>
-            <em className="block italic text-pearl-accent">live, work and operate.</em>
+            <span className="block">
+              people <em className="italic text-pearl-accent">live, work and</em>
+            </span>
+            <em className="block italic text-pearl-accent">operate.</em>
           </h1>
           <p className="mt-8 max-w-xl text-base leading-relaxed text-pearl-surface/70 md:text-lg">
             Pearl Group Enterprises is a Central Florida family-owned company that brings together
