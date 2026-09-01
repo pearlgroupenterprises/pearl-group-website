@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-import heroHeritage from "@/assets/hero-heritage.jpg";
-import coLeverai from "@/assets/co-leverai.jpg";
-import coBreathesafe from "@/assets/co-breathesafe.jpg";
-import coSolstone from "@/assets/co-solstone.jpg";
+import heroCentralFlorida from "@/assets/hero-central-florida.jpg.asset.json";
+import coLeverai from "@/assets/co-leverai-florida.jpg.asset.json";
+import coBreathesafe from "@/assets/co-breathesafe-florida.jpg.asset.json";
+import coSolstone from "@/assets/co-solstone-florida.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,9 +45,9 @@ const businesses: Business[] = [
     tagline: "Healthier indoor environments.",
     description:
       "Healthy-building and indoor-air-quality solutions for homes, businesses and organizations.",
-    image: coBreathesafe,
-    href: "https://breathesafe.tech",
-    domain: "breathesafe.tech",
+    image: coBreathesafe.url,
+    href: "https://breathesafetech.com",
+    domain: "breathesafetech.com",
   },
   {
     num: "02",
@@ -55,9 +55,9 @@ const businesses: Business[] = [
     tagline: "Smarter business operations.",
     description:
       "Practical AI and automation solutions that help growing businesses reduce repetitive work and operate more efficiently.",
-    image: coLeverai,
-    href: "https://leverai.io",
-    domain: "leverai.io",
+    image: coLeverai.url,
+    href: "https://leversmb.com",
+    domain: "leversmb.com",
   },
   {
     num: "03",
@@ -65,9 +65,9 @@ const businesses: Business[] = [
     tagline: "Better property performance.",
     description:
       "Residential property management centered on owner confidence, property care and disciplined operations.",
-    image: coSolstone,
-    href: "https://solstonemgmt.com",
-    domain: "solstonemgmt.com",
+    image: coSolstone.url,
+    href: "https://solstonepm.com",
+    domain: "solstonepm.com",
   },
 ];
 
@@ -86,7 +86,7 @@ const pillars = [
   },
   {
     title: "Long-term value",
-    copy: "Relationships and businesses built to compound over years, not quarters.",
+    copy: "Businesses and relationships built for lasting value.",
   },
 ];
 
@@ -164,7 +164,7 @@ function Index() {
               <br />
               that improve how
               <br />
-              people live and work.
+              people live, work and operate.
             </h1>
             <p className="max-w-lg text-lg leading-relaxed text-pearl-dark/70">
               Pearl Group Enterprises is a Central Florida-based company developing and operating
@@ -188,10 +188,10 @@ function Index() {
           </div>
           <div className="lg:col-span-5">
             <img
-              src={heroHeritage}
-              alt="Modern limestone and glass building facade in golden hour light"
-              width={800}
-              height={1000}
+              src={heroCentralFlorida.url}
+              alt="Contemporary Central Florida architecture in warm natural light"
+              width={1280}
+              height={1600}
               className="aspect-[4/5] w-full rounded-sm object-cover outline outline-1 -outline-offset-1 outline-pearl-dark/5"
             />
           </div>
@@ -212,10 +212,13 @@ function Index() {
                   real customer problems.
                 </h2>
                 <p className="mt-8 max-w-2xl text-lg leading-relaxed text-pearl-surface/70">
-                  Founded and led from Central Florida, Pearl develops and operates focused
-                  companies in healthy buildings, technology-enabled business services and
-                  residential real estate — bringing disciplined ownership, shared standards and
-                  long-term stewardship to each one.
+                  Based in Central Florida, Pearl Group develops and operates focused businesses in
+                  healthy buildings, technology-enabled business services and residential real
+                  estate. We combine specialized expertise, practical technology and disciplined
+                  operations with a long-term approach to ownership and relationships.
+                </p>
+                <p className="mt-10 border-t border-pearl-surface/20 pt-6 font-serif text-lg italic text-pearl-accent">
+                  Built in Central Florida. Built for long-term value.
                 </p>
               </div>
             </div>
@@ -258,8 +261,8 @@ function Index() {
                       src={co.image}
                       alt={co.name}
                       loading="lazy"
-                      width={768}
-                      height={512}
+                       width={1280}
+                       height={853}
                       className="mb-5 h-44 w-full rounded-sm object-cover outline outline-1 -outline-offset-1 outline-pearl-dark/5"
                     />
                     <span className="text-[10px] uppercase tracking-[0.15em] text-pearl-dark/40">
@@ -299,38 +302,30 @@ function Index() {
 
       {/* Leadership */}
       <section id="leadership" className="bg-white">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 py-24 md:grid-cols-2 md:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:px-8">
           <Reveal>
-            <img
-              src={heroHeritage}
-              alt="Architectural detail representing Pearl Group's foundation"
-              loading="lazy"
-              width={800}
-              height={1000}
-              className="aspect-[4/5] w-full rounded-sm object-cover outline outline-1 -outline-offset-1 outline-pearl-dark/5"
-            />
-          </Reveal>
-          <Reveal className="flex flex-col justify-center">
             <p className="mb-6 text-xs uppercase tracking-widest text-pearl-accent">Leadership</p>
-            <h2 className="mb-8 font-serif text-4xl leading-tight md:text-5xl">
-              Founder-led. Systems-oriented.
+            <h2 className="max-w-3xl font-serif text-4xl leading-tight md:text-5xl">
+              Founder-led. Built with a long-term view.
             </h2>
-            <div className="space-y-10">
-              <div className="border-l-2 border-pearl-accent pl-6">
-                <h3 className="font-serif text-2xl">JJ Castillo</h3>
-                <p className="mt-1 text-sm uppercase tracking-widest text-pearl-dark/50">
+            <div className="mt-14 grid gap-px border-y border-pearl-dark/10 bg-pearl-dark/10 md:grid-cols-2">
+              <div className="bg-white py-8 md:pr-10">
+                <a
+                  href="https://castillolugo.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-serif text-2xl transition-colors hover:text-pearl-accent"
+                >
+                  Juan J. Castillo
+                </a>
+                <p className="mt-2 text-xs uppercase tracking-widest text-pearl-dark/50">
                   Founder &amp; Managing Partner
                 </p>
-                <p className="mt-4 max-w-md leading-relaxed text-pearl-dark/70">
-                  JJ Castillo is an environmental engineer, international executive and entrepreneur
-                  with more than 15 years of experience leading programs, partnerships and
-                  organizations across environmental health, sustainability and public policy.
-                </p>
               </div>
-              <div className="border-l-2 border-pearl-accent pl-6">
+              <div className="bg-white py-8 md:pl-10">
                 <h3 className="font-serif text-2xl">Malory Jimenez</h3>
-                <p className="mt-1 text-sm uppercase tracking-widest text-pearl-dark/50">
-                  Operations, Brand &amp; Client Experience
+                <p className="mt-2 text-xs uppercase tracking-widest text-pearl-dark/50">
+                  Founder · Brand &amp; Client Experience
                 </p>
               </div>
             </div>
@@ -346,11 +341,11 @@ function Index() {
               Let&rsquo;s explore opportunities together.
             </h2>
             <p className="mx-auto mt-8 max-w-xl leading-relaxed text-pearl-dark/70">
-              For partnerships, business opportunities and institutional inquiries, connect with
-              Pearl Group Enterprises.
+               For partnerships, business opportunities, supplier relationships and institutional
+               inquiries, connect with Pearl Group Enterprises.
             </p>
             <a
-              href="mailto:hello@pearlgroup.enterprises"
+               href="mailto:jj@pearlgroupenterprises.com"
               className="mt-10 inline-block bg-pearl-dark px-8 py-4 text-[11px] font-semibold uppercase tracking-widest text-pearl-surface transition-all hover:bg-pearl-accent hover:text-pearl-dark"
             >
               Start a Conversation
@@ -368,10 +363,10 @@ function Index() {
               Building businesses that improve how people live, work and operate.
             </p>
             <a
-              href="mailto:hello@pearlgroup.enterprises"
+               href="mailto:jj@pearlgroupenterprises.com"
               className="border-b border-pearl-accent pb-1 text-sm tracking-wide transition-colors hover:text-pearl-accent"
             >
-              hello@pearlgroup.enterprises
+               jj@pearlgroupenterprises.com
             </a>
           </div>
           <div>
@@ -400,7 +395,9 @@ function Index() {
         </div>
         <div className="mx-auto mt-20 flex max-w-7xl justify-between border-t border-pearl-surface/10 pt-8 text-[10px] uppercase tracking-widest text-pearl-surface/30">
           <span>&copy; {new Date().getFullYear()} Pearl Group Enterprises LLC</span>
-          <span>Privacy &amp; Terms</span>
+             <a href="https://pearlgroupenterprises.com" className="hover:text-pearl-accent">
+               pearlgroupenterprises.com
+             </a>
         </div>
       </footer>
     </div>
