@@ -73,7 +73,6 @@ const businesses: Business[] = [
 
 const founders = [
   {
-    num: "01",
     name: "Juan J. Castillo",
     title: "Co-Founder & Managing Partner",
     expertise: "Strategy · Operations · Business Development",
@@ -81,10 +80,9 @@ const founders = [
     linkLabel: "Meet Juan",
   },
   {
-    num: "02",
     name: "Malory Jimenez",
     title: "Co-Founder & Managing Partner",
-    expertise: "Brand · Client Experience · Business Development",
+    expertise: "Brand · Client Experience · Creative Director",
     link: "https://maloryjimenez.com",
     linkLabel: "Meet Malory",
   },
@@ -330,29 +328,22 @@ function Index() {
               <div className="grid gap-px self-start bg-pearl-dark/10">
                 {founders.map((f) => (
                   <div key={f.name} className="bg-pearl-surface py-8">
-                    <div className="flex items-start gap-6">
-                      <span className="mt-1 font-serif text-base italic text-pearl-gold">
-                        {f.num}
+                    <h3 className="font-serif text-2xl md:text-[1.75rem]">{f.name}</h3>
+                    <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-pearl-teal">
+                      {f.title}
+                    </p>
+                    <p className="mt-3 text-sm text-pearl-dark/55">{f.expertise}</p>
+                    <a
+                      href={f.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group mt-5 inline-flex items-center gap-2 border-b border-pearl-dark/20 pb-1 text-sm text-pearl-dark/70 transition-colors hover:border-pearl-gold hover:text-pearl-gold"
+                    >
+                      {f.linkLabel}
+                      <span className="transition-transform group-hover:translate-x-1" aria-hidden>
+                        &rarr;
                       </span>
-                      <div>
-                        <h3 className="font-serif text-2xl md:text-[1.75rem]">{f.name}</h3>
-                        <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-pearl-teal">
-                          {f.title}
-                        </p>
-                        <p className="mt-3 text-sm text-pearl-dark/55">{f.expertise}</p>
-                        <a
-                          href={f.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="group mt-5 inline-flex items-center gap-2 border-b border-pearl-dark/20 pb-1 text-sm text-pearl-dark/70 transition-colors hover:border-pearl-gold hover:text-pearl-gold"
-                        >
-                          {f.linkLabel}
-                          <span className="transition-transform group-hover:translate-x-1" aria-hidden>
-                            &rarr;
-                          </span>
-                        </a>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                 ))}
               </div>
@@ -378,7 +369,7 @@ function Index() {
               inquiries, connect with Pearl Group Enterprises.
             </p>
             <a
-              href="mailto:jj@pearlgroupenterprises.com"
+              href="mailto:hello@pearlgroupenterprises.com"
               className="group mt-12 inline-flex items-center gap-3 bg-pearl-surface px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-pearl-dark transition-colors hover:bg-pearl-accent"
             >
               Start a Conversation
@@ -431,10 +422,10 @@ function Index() {
         <div className="mx-auto mt-16 flex max-w-7xl flex-col gap-3 border-t border-pearl-surface/10 pt-8 text-[10px] uppercase tracking-[0.22em] text-pearl-surface/40 sm:flex-row sm:justify-between">
           <span>&copy; {new Date().getFullYear()} Pearl Group Enterprises LLC</span>
           <a
-            href="mailto:jj@pearlgroupenterprises.com"
+            href="mailto:hello@pearlgroupenterprises.com"
             className="transition-colors hover:text-pearl-accent"
           >
-            jj@pearlgroupenterprises.com
+            hello@pearlgroupenterprises.com
           </a>
         </div>
       </footer>
