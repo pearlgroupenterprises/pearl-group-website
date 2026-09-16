@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-import heroLiveOakCentralFlorida from "@/assets/hero-live-oak-central-florida.jpg";
+import heroCentralFlorida from "@/assets/hero-central-florida-v2.webp";
 import coLeverai from "@/assets/co-leverai-florida-2.jpg.asset.json";
 import coBreathesafe from "@/assets/co-breathesafe-florida.jpg.asset.json";
 import coSolstone from "@/assets/co-solstone-florida.jpg.asset.json";
@@ -148,10 +148,10 @@ function Index() {
       {/* Hero with integrated navigation */}
       <header id="top" className="relative isolate min-h-[92vh] overflow-hidden bg-pearl-dark">
         <img
-          src={heroLiveOakCentralFlorida}
+          src={heroCentralFlorida}
           alt="Contemporary Central Florida architecture beneath a mature live oak in warm natural light"
-          width={1920}
-          height={1200}
+          width={1672}
+          height={941}
           fetchPriority="high"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-[58%_center] md:object-center"
         />
