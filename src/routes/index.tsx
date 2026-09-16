@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 import heroCentralFlorida from "@/assets/hero-central-florida-v2.webp";
-import coLeverai from "@/assets/co-leverai-florida-2.jpg.asset.json";
-import coBreathesafe from "@/assets/co-breathesafe-florida.jpg.asset.json";
-import coSolstone from "@/assets/co-solstone-florida.jpg.asset.json";
+import coLeverai from "@/assets/co-leverai-florida-2.jpg";
+import coBreathesafe from "@/assets/co-breathesafe-florida.jpg";
+import coSolstone from "@/assets/co-solstone-florida.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,7 +29,6 @@ export const Route = createFileRoute("/")({
 });
 
 interface Business {
-  num: string;
   name: string;
   tagline: string;
   description: string;
@@ -41,34 +40,31 @@ interface Business {
 
 const businesses: Business[] = [
   {
-    num: "01",
     name: "Breathe Safe Technologies",
     tagline: "Healthier indoor environments.",
     description:
       "Healthy-building and indoor-air-quality solutions for homes, businesses and organizations.",
-    image: coBreathesafe.url,
+    image: coBreathesafe,
     alt: "Bright, contemporary indoor workspace with natural light and clean air",
     href: "https://breathesafetech.com",
     domain: "breathesafetech.com",
   },
   {
-    num: "02",
     name: "Lever AI",
     tagline: "Smarter business operations.",
     description:
       "Practical AI and automation solutions that help growing businesses reduce repetitive work and operate more efficiently.",
-    image: coLeverai.url,
+    image: coLeverai,
     alt: "Business operator reviewing workflow dashboards on a laptop and tablet",
     href: "https://leversmb.com",
     domain: "leversmb.com",
   },
   {
-    num: "03",
     name: "Solstone Property Management",
     tagline: "Better property performance.",
     description:
       "Property and asset management focused on owner confidence, property care, operational consistency and long-term value.",
-    image: coSolstone.url,
+    image: coSolstone,
     alt: "Refined Central Florida residence with mature landscaping in warm light",
     href: "https://solstonepm.com",
     domain: "solstonepm.com",
@@ -282,8 +278,7 @@ function Index() {
                   rel="noreferrer"
                   className="group flex h-full flex-col bg-pearl-surface p-8 transition-colors hover:bg-white md:p-10"
                 >
-                  <div className="mb-10 flex items-start justify-between">
-                    <span className="font-serif text-xl italic text-pearl-dark/70">{co.num}</span>
+                  <div className="mb-10 flex justify-end">
                     <span
                       className="text-pearl-gold transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                       aria-hidden
